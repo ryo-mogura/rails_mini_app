@@ -5,13 +5,14 @@ ruby "3.2.3"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
-# The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+# Assets
+gem 'font-awesome-rails'
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
-# Use the Puma web server [https://github.com/puma/puma]
+# Application server
 gem "puma", ">= 5.0"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
@@ -26,8 +27,10 @@ gem "stimulus-rails"
 # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "cssbundling-rails"
 
-# Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+# UI/UX
+gem 'rails-i18n'
+gem 'jbuilder'
+gem 'meta-tags'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -48,8 +51,34 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
-  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  # CLI
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  # テスト
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'simplecov', require: false
+
+  # デバッグ
   gem "debug", platforms: %i[ mri windows ]
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'byebug'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
+
+  # code analyze
+  gem 'brakeman', require: false
+  gem 'bullet'
+  gem 'reek'
+  gem 'rspec_junit_formatter'
+  gem 'rubocop'
+  gem 'rubocop-checkstyle_formatter'
+  gem 'rubocop-rails'
+  gem 'scss_lint', require: false
+
 end
 
 group :development do
@@ -58,13 +87,11 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+  gem 'faker'
 end
