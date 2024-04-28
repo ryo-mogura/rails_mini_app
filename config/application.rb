@@ -30,4 +30,3 @@ module Miniapp
     end
   end
 end
-[chore] #4 アプリ全体のジェネレーターの設定を変更
