@@ -17,8 +17,12 @@
       <%= f.password_field :password, class: "grow", placeholder: "パスワード" %>
     </label>
 
+    <label class="input input-bordered flex items-center my-3">
+      <%= f.password_field :password_confirmation, class: "grow", placeholder: "パスワード確認用"  %>
+    </label>
+
     <div class="flex justify-center w-full">
-      <%= f.submit "ログイン", class:"btn btn-outline btn-info my-3" %>
+      <%= f.submit "登録", class:"btn btn-outline btn-info my-3" %>
     </div>
   <% end %>
 </div>
