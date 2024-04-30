@@ -1,0 +1,19 @@
+<%# ログインページ %>
+<div class="flex justify-center">
+  <%= form_with url: login_path do |f| %>
+    <label class="input input-bordered flex items-center my-5">
+      <%= f.email_field :email, class:"grow", placeholder: "メールアドレス" %>
+    </label>
+
+    <label class="input input-bordered flex items-center my-5">
+      <%= f.password_field :password, class: "grow", placeholder: "パスワード"  %>
+    </label>
+
+    <div class="flex justify-center w-full">
+      <%= f.submit "ログイン", class:"btn btn-outline btn-info my-3" %>
+    </div>
+  <% end %>
+</div>
+  <div class="flex justify-center my-3">
+    <%= link_to '登録ページへ', new_user_path, class: "link link-primary" %>
+  </div>
