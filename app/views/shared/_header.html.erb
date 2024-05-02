@@ -52,6 +52,7 @@
                 <span class="badge">New</span>
               </a>
             </li>
+            <li><%= current_user.decorate.full_name %></li>
             <li><%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete } %></li>
           </ul>
         </div>
