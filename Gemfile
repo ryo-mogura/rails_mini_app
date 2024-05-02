@@ -31,6 +31,7 @@ gem "cssbundling-rails"
 gem 'rails-i18n'
 gem 'jbuilder'
 gem 'meta-tags'
+gem 'draper'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -49,6 +50,8 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+gem 'sorcery'
 
 group :development, :test do
   # CLI
